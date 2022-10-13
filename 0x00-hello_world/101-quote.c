@@ -4,7 +4,7 @@
  * Description: uses stderr and outputs message to the screen
  * stderr meassages can only be displayed on the console
  * Return: Always 1
- */ 
+*/ 
 int main(void)
 {
 fprintf(stderr,
