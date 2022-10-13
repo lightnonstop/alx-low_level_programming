@@ -2,9 +2,9 @@
 /**
  * main - starting point
  * Description: uses stderr and outputs message to the screen
- * stderr meassages can only be displayed on the console
- * Return: 1
- */ 
+ * standard error messages can only be displayed on the console
+ * Return: Always 1 (success)
+ */
 int main(void)
 {
 fprintf(stderr,
