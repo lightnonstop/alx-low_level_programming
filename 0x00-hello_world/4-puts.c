@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main(void)
 {
-/* 
+/** 
  * main - prints string with newline 
  * Return: zero
 */
