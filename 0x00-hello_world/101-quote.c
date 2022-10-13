@@ -3,7 +3,7 @@
  * main - starting point
  * Description: uses stderr and outputs message to the screen
  * stderr meassages can only be displayed on the console
- * Return: Always 1
+ * Return: 1
  */ 
 int main(void)
 {
