@@ -4,7 +4,8 @@
  * Description: integer values have been declared
  * and bytes size values assigned for output process
  * Return: 0
-*/ 
+ *
+ */
 int main(void)
 {
 int size_of_char = sizeof(char);
