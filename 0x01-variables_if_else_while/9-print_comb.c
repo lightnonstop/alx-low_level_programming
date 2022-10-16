@@ -8,7 +8,7 @@
 int main(void)
 {
 int num;
-for (num = 48; num <= 57; num++)
+for (num = 48; num < 57; num++)
 {
 if (num == 57)
 {
@@ -16,11 +16,10 @@ putchar(num);
 }
 else
 {
-putchar(num);
-putchar(44);
+putchar(num)
 putchar(32);
+putchar(44);
 }
 }
-putchar('\n');
 return (0);
 }
