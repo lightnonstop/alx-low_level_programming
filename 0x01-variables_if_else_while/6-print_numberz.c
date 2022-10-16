@@ -8,10 +8,10 @@
 */
 int main(void)
 {
-int digit;
-for (digit = 0; digit < 10; digit++)
+int n;
+for (n = 48; n <= 57; n++)
 {
-putchar(digit);
+putchar(n);
 }
 putchar('\n');
 return (0);
