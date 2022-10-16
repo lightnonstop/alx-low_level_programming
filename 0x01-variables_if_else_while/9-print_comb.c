@@ -10,17 +10,9 @@ int main(void)
 int num, ch = 32;
 for (num = 48; num <= 57; num++)
 {
-if (num == 57)
-{
-ch = ' ';
-putchar(num);
-}
-else
-{
 putchar(num);
 putchar(44);
 putchar(ch);
-}
 }
 return (0);
 }
