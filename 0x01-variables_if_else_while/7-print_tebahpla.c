@@ -4,7 +4,6 @@
  * putchar function accepts a one character argument
  * Return: 0 (Success)
 */
-
 int main(void)
 {
 char ch;
