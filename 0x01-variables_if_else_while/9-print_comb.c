@@ -8,20 +8,15 @@
 int main(void)
 {
 int num;
-int space;
-int comma;
-comma = 44;
-space = 32;
 for (num = 48; num <= 57; num++)
 {
-if (num == 57)
-{
-space = 0;
-comma = '\n';
-}
 putchar(num);
-putchar(comma);
-putchar(space);
+if (num < 57)
+{
+putchar(44);
+putchar(32);
 }
+}
+putchar('\n');
 return (0);
 }
