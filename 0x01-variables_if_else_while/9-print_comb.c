@@ -16,7 +16,7 @@ for (num = 48; num <= 57; num++)
 {
 if (num == 57)
 {
-space;
+space = 0;
 comma = '\n';
 }
 putchar(num);
