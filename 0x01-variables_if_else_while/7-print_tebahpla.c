@@ -1,5 +1,5 @@
 #include <stdio.h>
-/** 
+/**
  * main - starting point function
  * Description: prints characters from z to a (backwards) with a newline
  * putchar function accepts a one character argument
