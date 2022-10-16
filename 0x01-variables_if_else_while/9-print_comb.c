@@ -16,7 +16,7 @@ putchar(num);
 }
 else
 {
-putchar(num)
+putchar(num);
 putchar(32);
 putchar(44);
 }
