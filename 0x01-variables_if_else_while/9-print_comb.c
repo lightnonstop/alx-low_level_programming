@@ -7,12 +7,21 @@
 */
 int main(void)
 {
-int num, ch = 32;
+int num;
+int space;
+int comma;
+comma = 44;
+space = 32;
 for (num = 48; num <= 57; num++)
 {
+if (num == 57)
+{
+space;
+comma = '\n';
+}
 putchar(num);
-putchar(44);
-putchar(ch);
+putchar(comma);
+putchar(space);
 }
 return (0);
 }
