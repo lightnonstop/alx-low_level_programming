@@ -7,18 +7,19 @@
 */
 int main(void)
 {
-int num;
+int num, ch = 32;
 for (num = 48; num <= 57; num++)
 {
 if (num == 57)
 {
+ch = ' ';
 putchar(num);
 }
 else
 {
 putchar(num);
 putchar(44);
-putchar(32);
+putchar(ch);
 }
 }
 return (0);
