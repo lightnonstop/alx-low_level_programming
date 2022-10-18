@@ -6,16 +6,8 @@
  * print_alphabet -dbdndnnddjjdd
  * Description: hsjsjdjdjdjj
  */
-void print_alphabet(void)
+int main(void)
 {
-	char alpha = 'a';
-
-	while (alpha <= 'z')
-	{
-		_putchar(alpha);
-		alpha++;
-	}
-	_putchar('\n');
+	void print_alphabet(void);
+	putchar('\n');
 }
-print_alphabet();
-return (0);
