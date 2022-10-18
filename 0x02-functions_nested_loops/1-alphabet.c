@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * main - Starting point function
  * Description: Invokes a function print_alphabet
@@ -14,10 +14,10 @@ int main(void)
 
 		while (alpha <= 'z')
 		{
-			putchar(alpha);
+			_putchar(alpha);
 			alpha++;
 		}
-		putchar('\n');
+		_putchar('\n');
 	}
 	print_alphabet();
 	return (0);
