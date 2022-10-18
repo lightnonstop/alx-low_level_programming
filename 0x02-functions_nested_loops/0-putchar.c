@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <main.h>
 /**
   * main - starting point function
   * Description: prints a string and a new line
