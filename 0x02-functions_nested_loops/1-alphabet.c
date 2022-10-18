@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 /**
  * main - Starting point function
@@ -6,9 +7,18 @@
  * print_alphabet -dbdndnnddjjdd
  * Description: hsjsjdjdjdjj
  */
-int main(void)
+void _putchar(char x)
 {
-	print_alphabet();
+	putchar(x);
+}
+
+void print_alphabet(void)
+{
+	char x;
+
+	for (x = 'a'; x < 'z'; x++)
+	{
+		_putchar(x);
+	}
 	_putchar('\n');
-	return (0);
 }
