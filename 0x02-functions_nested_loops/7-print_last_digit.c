@@ -7,7 +7,7 @@
   * integer to character conversion
   * Return: 0 (Success)
   */
-int print_last_digit(int)
+int print_last_digit(int n)
 {
 	if (n > 0)
 	{
