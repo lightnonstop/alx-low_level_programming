@@ -22,6 +22,6 @@ int _islower(int c)
 			break;
 		}
 	}
-	return ret;
+	return (ret);
 }
 
