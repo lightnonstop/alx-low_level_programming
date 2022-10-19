@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
   * print_last_digit - prints the last digit of an integer
   * @n: First Operand
@@ -11,11 +11,11 @@ int print_last_digit(int n)
 {
 	if (n > 0)
 	{
-		putchar(n%10 + '0');
+		_putchar(n%10 + '0');
 	}
 	else
 	{
-		putchar(-n%10 + '0');
+		_putchar(-n%10 + '0');
 	}
 	return (0);
 }
