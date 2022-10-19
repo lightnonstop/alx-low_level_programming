@@ -1,24 +1,25 @@
 #include <stdio.h>
 int main(void)
 {
-	int upp, low, c = '7';
+	char upp, low;
+        int c = 65;
 	char ret;
 
-	for (low = 97; low <= 122; low++)
+	for (upp = 'A'; upp <= 'Z'; upp++)
 	{
-		for (upp = 65; upp <= 90; upp++)
+		for (low = 'a'; low <= 'z'; low++)
 		{
-			if (c == low || c == upp)
+			if (c != upp || c != low)
 			{
-				ret = 'Y';
+				ret = 'N';
 			}
 			else
 			{
-				ret = 'N';
-				break;
+				ret = 'Y';
 			}
 		}
 	}
 	putchar(ret);
+	putchar('\n');
 	return (0);
 }

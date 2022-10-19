@@ -2,7 +2,7 @@
 /**
   * _islower - checks if a value is lowercase
   * @c: First Operand
-  * Description: porgram uses int data types
+  * Description: Program uses int data types
   * and breaks if the value is lowercase
   * Return: 1 (Success) or 0 (Failure)
   */
