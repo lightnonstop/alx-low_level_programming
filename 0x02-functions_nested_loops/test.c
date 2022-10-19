@@ -1,18 +1,23 @@
 #include <stdio.h>
 int main(void)
 {
-	int c = ']';
-	char ret;
+	int sign, n = -145, ret;
 
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+	if (n > 0)
 	{
-		ret = 'Y';
+		sign = '+';
+		ret = 1;
+	}
+	else if (n == 0)
+	{
+		sign = '0';
+		ret = 0;
 	}
 	else
 	{
-		ret = 'N';
+		sign = '-';
+		ret = -1;
 	}
-	putchar(ret);
-	putchar('\n');
-	return (0);
+	putchar(sign);
+	return (ret);
 }
