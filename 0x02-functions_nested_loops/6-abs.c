@@ -8,7 +8,7 @@
   */
 int _abs(int n)
 {
-	int n, absolute;
+	int absolute;
 	if (n < 0)
 	{
 		absolute = n*-1;
