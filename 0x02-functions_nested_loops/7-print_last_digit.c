@@ -5,11 +5,11 @@
   * Description: Divides integer argument by base ten
   * Remainder of the division is added to character 0 for 
   * integer to character conversion
-  * Return: The last digit of an integer
+  * Return: The last digit of as an integer
   */
 int print_last_digit(int n)
 {
-	int lstdigit;
+	int lstdigit, ret;
 	if (n > 0)
 	{
 		lstdigit = n%10 + '0';
@@ -18,6 +18,6 @@ int print_last_digit(int n)
 	{
 		lstdigit = -n%10 + '0';
 	}
-	_putchar(lstdigit);
-	return (lstdigit);
+	ret = _putchar(lstdigit);
+	return (ret);
 }
