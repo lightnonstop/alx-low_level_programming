@@ -3,7 +3,7 @@
   * print_last_digit - prints the last digit of an integer
   * @n: First Operand
   * Description: Divides integer argument by base ten
-  * Remainder of the division is added to character 0 for 
+  * Remainder of the division is added to character 0 for
   * integer to character conversion
   * Return: The last digit of as an integer
   */
