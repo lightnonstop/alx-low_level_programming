@@ -1,6 +1,7 @@
 #include "main.h"
 /**
   * print_sign - prints sign of the function's argument
+  * @n: First Operand
   * Description - Checks are done with respect to zero
   * If argument is greater than, less than zero or equal to zero,
   * it is positive, negative or zero respectively.
