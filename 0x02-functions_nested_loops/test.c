@@ -1,23 +1,16 @@
 #include <stdio.h>
 int main(void)
 {
-	char upp, low;
-        int c = 65;
+	int c = ']';
 	char ret;
 
-	for (upp = 'A'; upp <= 'Z'; upp++)
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
 	{
-		for (low = 'a'; low <= 'z'; low++)
-		{
-			if (c != upp || c != low)
-			{
-				ret = 'N';
-			}
-			else
-			{
-				ret = 'Y';
-			}
-		}
+		ret = 'Y';
+	}
+	else
+	{
+		ret = 'N';
 	}
 	putchar(ret);
 	putchar('\n');
