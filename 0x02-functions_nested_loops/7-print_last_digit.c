@@ -21,7 +21,7 @@ int print_last_digit(int n)
 		lstdigit = '0';
 		ret = 0;
 	}
-	else
+	else if (n < 0)
 	{
 		lstdigit = -n % 10 + '0';
 		ret = -n % 10;
