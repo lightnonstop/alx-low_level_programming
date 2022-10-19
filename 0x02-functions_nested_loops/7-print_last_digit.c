@@ -16,6 +16,11 @@ int print_last_digit(int n)
 		lstdigit = n % 10 + '0';
 		ret = n % 10;
 	}
+	else if (n == 0)
+	{
+		lstdigit = '0';
+		ret = 0;
+	}
 	else
 	{
 		lstdigit = -n % 10 + '0';
