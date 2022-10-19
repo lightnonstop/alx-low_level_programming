@@ -1,23 +1,15 @@
 #include <stdio.h>
 int main(void)
 {
-	int sign, n = -145, ret;
-
-	if (n > 0)
+	int n = -767, a;
+	if (n < 0)
 	{
-		sign = '+';
-		ret = 1;
+		a = n*-1;
 	}
-	else if (n == 0)
+	else if (n > 0)
 	{
-		sign = '0';
-		ret = 0;
+		a = n;
 	}
-	else
-	{
-		sign = '-';
-		ret = -1;
-	}
-	putchar(sign);
-	return (ret);
+	printf("%d",a);
+	return (0);
 }
