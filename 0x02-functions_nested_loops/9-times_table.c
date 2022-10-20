@@ -29,13 +29,19 @@ void times_table(void)
 			}
 			if (!(fst >= 0 && sec == 9))
 			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-			}
+				_putchar(',');			}
 			else
 			{
 				_putchar('\n');
+			}
+			if ( mult < 10 && sec < 9)
+			{
+				_putchar(' ');
+				_putchar(' ');
+			}
+			else if (mult >= 10 && sec < 9)
+			{
+				_putchar(' ');
 			}
 		}
 	}
