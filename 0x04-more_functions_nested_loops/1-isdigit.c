@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 /**
   * _isdigit - Checks for a digit from 0 through 9
   * @c: First Operand
@@ -18,7 +18,9 @@ int _isdigit(int c)
 			break;
 		}
 		else
+		{
 			ret = 0;
+		}
 		digit++;
 	}
 	return (ret);
