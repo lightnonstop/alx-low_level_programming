@@ -9,23 +9,10 @@
   */
 int print_last_digit(int n)
 {
-	int lstdigit, ret;
+	int lstdigit = n % 10;
 
-	if (n > 0)
-	{
-		lstdigit = n % 10 + '0';
-		ret = n % 10;
-	}
-	else if (n == 0)
-	{
-		lstdigit = '0';
-		ret = 0;
-	}
-	else if (n < 0)
-	{
-		lstdigit = -n % 10 + '0';
-		ret = -n % 10;
-	}
-	_putchar (lstdigit);
-	return (ret);
+	if (lstdigit < 0)
+		lstdigit *= -1;
+	_putchar (lstdigit + '0');
+	return (lstdigit);
 }
