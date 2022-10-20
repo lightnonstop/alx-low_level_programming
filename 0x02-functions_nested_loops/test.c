@@ -26,12 +26,19 @@ int main(void)
 			if (!(fst >= 0 && sec == 9))
 			{
 				putchar(',');
-				putchar(' ');
-				putchar(' ');
 			}
 			else
 			{
 				putchar('\n');
+			}
+			if (mult < 10 && sec < 9)
+			{
+				putchar(' ');
+				putchar(' ');
+			}
+			else if (mult >= 10 && sec < 9)
+			{
+				putchar(' ');
 			}
 		}
 	}

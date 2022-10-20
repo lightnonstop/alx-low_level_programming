@@ -4,8 +4,8 @@
   * Description: Loops through the first number and second numbers
   * Multiplies both integers to make a result
   * if a number is less than 10, prints the only digit
-  * else if the number is equals to or greater than ten, 
-  * the result of its float division becomes the first digit 
+  * else if the number is equals to or greater than ten,
+  * the result of its float division becomes the first digit
   * and the result of the remainder division becomes the second digit.
   */
 void times_table(void)
