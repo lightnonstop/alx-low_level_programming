@@ -31,7 +31,7 @@ int main(void)
 			{
 				putchar('\n');
 			}
-			if (mult < 10 && sec < 9)
+			if (mult < 10 && sec < 9 && fst < 5)
 			{
 				putchar(' ');
 				putchar(' ');
