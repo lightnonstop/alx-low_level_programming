@@ -8,14 +8,31 @@
   */
 int main(void)
 {
-	int n = -1024;
-	if (n > 0)
+	int mult, fst, sec;
+	for (fst = 0; fst < 10; fst++)
 	{
-		putchar(n%10 + '0');
-	return (0);
-	}
-	else
-	{
-		putchar(-n%10 + '0');
+		for (sec = 0; sec < 10; sec++)
+		{
+			mult = fst * sec;
+			if (mult >= 10)
+			{
+				putchar((mult / 10) + '0');
+				putchar((mult % 10) + '0');
+			}
+			else
+			{
+				putchar(mult + '0');
+			}
+			if (!(fst >= 0 && sec == 9))
+			{
+				putchar(',');
+				putchar(' ');
+				putchar(' ');
+			}
+			else
+			{
+				putchar('\n');
+			}
+		}
 	}
 }
