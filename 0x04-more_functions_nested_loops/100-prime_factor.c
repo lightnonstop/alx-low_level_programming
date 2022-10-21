@@ -9,8 +9,9 @@
   */
 int main(void)
 {
-	long long n = 612852475143;
-	long long maxPrime = -1;
+	long int n = 612852475143;
+	int maxPrime = -1;
+	int i;
 
 	while (n % 2 == 0)
 	{
@@ -22,7 +23,7 @@ int main(void)
 		maxPrime = 3;
 		n = n / 3;
 	}
-	for (int i = 5; i <= sqrt(n); i += 6)
+	for (i = 5; i <= sqrt(n); i += 6)
 	{
 		while (n % i == 0)
 		{
@@ -37,6 +38,6 @@ int main(void)
 	}
 	if (n > 4)
 		maxPrime = n;
-	printf("%lld\n", maxPrime);
+	printf("%d\n", maxPrime);
 	return (0);
 }
