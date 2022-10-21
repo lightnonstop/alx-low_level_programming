@@ -6,19 +6,17 @@
   */
 int main(void)
 {
-	int n = 1, i, j;
+	int n = 0, i, j;
 
 	if (n > 0)
 	{
-		putchar(92);
-		putchar('\n');
 		for (i = 1; i < n; i++)
 		{
-			for (j = 1; j <= i; j++)
+			for (j = 1; j < n; j++)
 			{
-				putchar('.');
+				putchar('#');
 			}
-			putchar(92);
+			putchar('#');
 			putchar('\n');
 		}
 	}
