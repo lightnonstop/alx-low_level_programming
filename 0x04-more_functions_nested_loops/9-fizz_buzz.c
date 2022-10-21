@@ -1,13 +1,14 @@
 #include "stdio.h"
 #include <stdlib.h>
-#include "main.h"
 /**
-  * fizz_buzz - Prints numbers from 1 t0 100
-  * Description -  For multiples of three print Fizz
+  * main - Starting point function
+  * Description: Prints numbers from 1 t0 100
+  * For multiples of three print Fizz
   * instead of the number and for the multiples of five print Buzz.
   * For numbers which are multiples of both three and five print FizzBuzz.
+  * Return: 0 (Success)
   */
-void fizz_buzz(void)
+int main(void)
 {
 	int num;
 
@@ -33,9 +34,10 @@ void fizz_buzz(void)
 		}
 		if (!(num == 100))
 		{
-			_putchar(' ');
+			putchar(' ');
 		}
 		num++;
 	}
-	_putchar('\n');
+	putchar('\n');
+	return (0);
 }
