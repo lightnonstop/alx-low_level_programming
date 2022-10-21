@@ -2,14 +2,14 @@
 #include <stdlib.h>
 #include <math.h>
 /**
-  * more_numbers - Prints 10 times the numbers, from 0 to 14.
-  * Description - Loops 10 times and prints 0 to 14, moves
-  * to the next line and continues until nine other times are completed.
+  * main - starting point function.
+  * Description -  finds and prints the largest prime factor
+  * of the number 612852475143
+  * Return: 0 (Success)
   */
 int main(void)
 {
-	long long n = 119;
-	
+	long long n = 612852475143;
 	long long maxPrime = -1;
 
 	while (n % 2 == 0)
@@ -37,6 +37,6 @@ int main(void)
 	}
 	if (n > 4)
 		maxPrime = n;
-	printf("%lld\n",maxPrime);
+	printf("%lld\n", maxPrime);
 	return (0);
 }
