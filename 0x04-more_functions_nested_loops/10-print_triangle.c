@@ -1,7 +1,7 @@
 #include "main.h"
 /**
   * print_triangle - Prints a triangle
-  * @size - Integer argument
+  * @size: Integer argument
   * Description - First loop prints pattern from the second loop as many
   * times as the given integer argument.
   * The pattern is reduced by 1 on every iteration.
