@@ -6,20 +6,25 @@
   */
 int main(void)
 {
-	int x = 0, loop = 1;
+	int n = 1, i, j;
 
-		while (loop <= 10)
+	if (n > 0)
+	{
+		putchar(92);
+		putchar('\n');
+		for (i = 1; i < n; i++)
 		{
-			for (x = 0; x <= 14; x++)
+			for (j = 1; j <= i; j++)
 			{
-				if (x >= 10)
-				{
-					putchar((x / 10) + '0');
-				}
-				putchar((x % 10) + '0');
+				putchar('.');
 			}
+			putchar(92);
 			putchar('\n');
-			loop++;
 		}
-		return (0);
+	}
+	else
+	{
+		putchar('\n');
+	}
+	return (0);
 }
