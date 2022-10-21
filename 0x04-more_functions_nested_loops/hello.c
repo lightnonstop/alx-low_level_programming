@@ -1,6 +1,5 @@
 #include "stdio.h"
 #include <stdlib.h>
-#include "main.h"
 /**
   * more_numbers - Prints 10 times the numbers, from 0 to 14.
   * Description - Loops 10 times and prints 0 to 14, moves
@@ -8,33 +7,18 @@
   */
 int main(void)
 {
-	int num;
-	num = 1;
-
-	while(num <= 100)
+	int size = 1, i , j, k;
+	for (i = size; i > 0; i--)
 	{
-		if (num % 3 == 0 && num % 5 == 0)
+		for (j = 1; j < i; j++)
 		{
-			printf("FizzBuzz");
+			putchar('.');
 		}
-		else if (num % 3 == 0)
+		for (k = i; k <= size; k++)
 		{
-			printf("Fizz");
+			putchar('#');
 		}
-		else if (num % 5 == 0)
-		{
-			printf("Buzz");
-		}
-		else
-		{
-			printf("%d", num);
-		}
-		if (!(num == 100))
-		{
-			_putchar(' ');
-		}
-		num++;
+		putchar('\n');
 	}
-	_putchar('\n');
 	return (0);
 }
