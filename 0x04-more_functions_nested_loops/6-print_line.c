@@ -7,9 +7,18 @@ void print_line(int n)
 {
 	int times = 0;
 
-	while (times < n)
+	if (n > 0)
 	{
-		_putchar('_');
-		times++;
+		while (times < n)
+		{
+			_putchar('_');
+			times++;
+		}
+		_putchar('\n');
+
+	}
+	else
+	{
+		_putchar('\n');
 	}
 }
