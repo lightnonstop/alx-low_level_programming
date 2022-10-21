@@ -6,17 +6,16 @@
   */
 int main(void)
 {
-	int n = 0, i, j;
+	int n = 1, i, j;
 
 	if (n > 0)
 	{
-		for (i = 1; i < n; i++)
+		for (i = 1; i <= n; i++)
 		{
-			for (j = 1; j < n; j++)
+			for (j = 1; j <= n; j++)
 			{
 				putchar('#');
 			}
-			putchar('#');
 			putchar('\n');
 		}
 	}
