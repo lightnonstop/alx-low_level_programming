@@ -14,13 +14,17 @@ int main(void)
 			putchar('-');
 			n = -n;
 		}
-		if (n / 10)
+		else
+		{
+
+		}
+		if ((n / 10) > 0)
 		{
 			print_number(n / 10);
 		}
 		putchar((n % 10) + '0');
 	}
-	int a = -24534;
+	int a = 98;
 	print_number(a);
 	putchar('\n');
 	return (0);
