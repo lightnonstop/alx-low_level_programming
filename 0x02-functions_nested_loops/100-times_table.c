@@ -20,27 +20,36 @@ void print_times_table(int n)
 			{
 				prod = fs * ss;
 
-				printf("%d", prod);
-				if (!(ss == n))
+				if (ss > 0)
 				{
-					putchar(',');
 					if (prod < 10)
 					{
 						putchar(' ');
 						putchar(' ');
 						putchar(' ');
-					}
-					else if (prod >= 100)
-					{
-						putchar(' ');
+						printf("%d", prod);
 					}
 					else if (prod >= 10 && prod < 100)
 					{
 						putchar(' ');
 						putchar(' ');
+						printf("%d", prod);
+					}
+					else if (prod >= 100)
+					{
+						putchar(' ');
+						printf("%d", prod);
 					}
 				}
 				else
+				{
+					printf("%d", prod);
+				}
+				if (!(ss == n))
+				{
+					putchar(',');
+				}
+				if (ss == n)
 				{
 					putchar('\n');
 				}
