@@ -23,7 +23,7 @@ int main(void)
 		ss = sum;
 
 		printf("%ld", sum);
-		if (!(n == 47))
+		if (!(n == 94))
 		{
 			putchar (',');
 			putchar(' ');
