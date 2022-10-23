@@ -11,9 +11,9 @@
   */
 int main(void)
 {
-	unsigned int n, fs = 1, ss = 2, sum;
+	unsigned long int n, fs = 1, ss = 2, sum;
 
-	printf("%u, %u, ", fs, ss);
+	printf("%lu, %lu, ", fs, ss);
 	for (n = 0; n < 95; n++)
 	{
 		sum = fs + ss;
@@ -22,7 +22,7 @@ int main(void)
 
 		ss = sum;
 
-		printf("%u", sum);
+		printf("%lu", sum);
 		if (!(n == 94))
 		{
 			putchar (',');
