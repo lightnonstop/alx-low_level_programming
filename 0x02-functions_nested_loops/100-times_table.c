@@ -34,7 +34,7 @@ void print_times_table(int n)
 					{
 						putchar(' ');
 					}
-					else if (prod >= 10)
+					else if (prod >= 10 && prod < 100)
 					{
 						putchar(' ');
 						putchar(' ');
