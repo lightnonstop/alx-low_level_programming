@@ -1,4 +1,4 @@
-#include <stdio.h>
+i#include <stdio.h>
 #include <stdlib.h>
 /**
   * main - Starting point function
@@ -14,7 +14,7 @@ int main(void)
 	unsigned long int n, fs = 1, ss = 2, sum;
 
 	printf("%lu, %lu, ", fs, ss);
-	for (n = 0; n < 96; n++)
+	for (n = 1; n <= 96; n++)
 	{
 		sum = fs + ss;
 
@@ -23,7 +23,7 @@ int main(void)
 		ss = sum;
 
 		printf("%lu", sum);
-		if (!(n == 95))
+		if (!(n == 96))
 		{
 			putchar (',');
 			putchar(' ');
