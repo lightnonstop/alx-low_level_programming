@@ -2,6 +2,10 @@
 #include "main.h"
 #include <stdlib.h>
 #include <string.h>
+/**
+  * print_rev - prints a string, in reverse.
+  * @s: Character argument
+  */
 void print_rev(char *s)
 {
 	int i, length = strlen(s);
