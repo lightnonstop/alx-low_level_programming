@@ -4,16 +4,16 @@
 #include "main.h"
 /**
   * cap_string - Changes all lowercase letters of a string to uppercase.
-  * @str: First Operand
+  * @s: First Operand
   * Description: Checks if each character in the string
   * is between a to z lowercase the subtracts 32 from their ascii character
-
   * value to obtain the uppercase of the character.
   * Return: Pointer string
   */
 char *cap_string(char *s)
 {
 	int i, length = strlen(s);
+
 	for (i = 0; i < length; i++)
 	{
 		if (i == 0)
