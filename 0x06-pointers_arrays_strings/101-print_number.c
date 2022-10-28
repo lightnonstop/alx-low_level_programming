@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <stdio.h>
 #include "main.h"
 /**
   * print_number - Prints an integer
@@ -9,6 +8,7 @@
 void print_number(int n)
 {
 	unsigned int x = n;
+
 	if (n < 0)
 	{
 		_putchar('-');
