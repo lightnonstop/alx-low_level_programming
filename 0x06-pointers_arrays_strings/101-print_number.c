@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "main.h"
 /**
   * print_number - Prints an integer
@@ -12,7 +11,7 @@ void print_number(int n)
 	if (n < 0)
 	{
 		_putchar('-');
-		x = -1 * x;
+		x = -x;
 	}
 	if ((x / 10 > 0))
 	{
