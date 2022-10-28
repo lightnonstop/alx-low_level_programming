@@ -7,7 +7,7 @@
   * @str: First Operand
   * Description: Replaces characters of specific alphabets in a string with
   * leet characters (A for 4, E for 3, O for 0, T for 7, L for 1)
-  * Return: Final pointer to string
+  * Return: Pointer to string
   */
 char *rot13(char *str)
 {
