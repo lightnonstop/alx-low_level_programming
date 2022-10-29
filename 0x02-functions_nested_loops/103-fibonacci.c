@@ -7,20 +7,18 @@
   */
 int main(void)
 {
-	long int n, fs = 1, ss = 2, sum = fs + ss, sum_even = 2;
+	long int fs = 1, ss = 2, sum, sum_even = 0;
 
-	while (sum < 4000000)
+	while (fs <= 4000000)
 	{
-		
+		sum = fs + ss;
 		fs = ss;
 		ss = sum;
-		
-		if (sum % 2 == 0)
+		if (fs % 2 == 0)
 		{
-			sum_even += sum;
+			sum_even += fs;
 		}
 	}
-	printf("%ld", sum_even);
-	putchar('\n');
+	printf("%ld\n", sum_even);
 	return (0);
 }
