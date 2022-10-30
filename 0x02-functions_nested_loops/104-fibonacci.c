@@ -11,19 +11,18 @@
   */
 int main(void)
 {
-	unsigned long int n, fs = 1, ss = 2, sum;
+	int n;
+	unsigned long int fs = 1, ss = 2, sum;
 
-	printf("%lu, %lu, ", fs, ss);
-	for (n = 0; n < 96; n++)
+	for (n = 0; n < 98; n++)
 	{
+		printf("%lu", fs);
 		sum = fs + ss;
 
 		fs = ss;
 
 		ss = sum;
-
-		printf("%lu", sum);
-		if (!(n == 95))
+		if (!(n == 97))
 		{
 			putchar (',');
 			putchar(' ');
