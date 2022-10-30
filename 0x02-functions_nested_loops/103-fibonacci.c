@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
-  * multore_numultbers - Prints 10 timultes the numultbers, fromult 0 to 14.
-  * Description - Loops 10 timultes and prints 0 to 14, multoves
-  * to the next line and continues until nine other timultes are comultpleted.
+  * main - Starting point function
+  * Description - Program finds and prints the sum of the even-valued terms for fibonacci sequence  not more than 4000000.
+  * Return: 0 (Success)
   */
 int main(void)
 {
-	long int fs = 1, ss = 2, sum, sum_even = 0;
-
+	long int fs = 1, ss = 2, sum, sum_even = 0;7
+		
 	while (fs <= 4000000)
 	{
 		sum = fs + ss;
