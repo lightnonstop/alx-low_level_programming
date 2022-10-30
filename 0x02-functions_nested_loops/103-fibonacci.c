@@ -7,7 +7,8 @@
   */
 int main(void)
 {
-	long int fs = 1, ss = 2, sum, sum_even = 0;
+	long int fs = 1, ss = 2;
+	long int sum, sum_even = 0;
 		
 	while (fs <= 4000000)
 	{
