@@ -2,14 +2,15 @@
 #include <stdlib.h>
 /**
   * main - Starting point function
-  * Description - Program finds and prints the sum of the even-valued terms for fibonacci sequence  not more than 4000000.
+  * Description - Program finds and prints the sum of the even-valued terms
+  * for fibonacci sequence  not more than 4000000.
   * Return: 0 (Success)
   */
 int main(void)
 {
 	long int fs = 1, ss = 2;
 	long int sum, sum_even = 0;
-		
+
 	while (fs <= 4000000)
 	{
 		sum = fs + ss;
