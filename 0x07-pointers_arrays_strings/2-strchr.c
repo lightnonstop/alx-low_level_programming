@@ -4,6 +4,7 @@
  * @s: Pointer to string to be checked
  * @c: Character to be searched in the string
  * Return: Pointer to the first occurrence of the character in the string
+ * or NULL if not found
  */
 char *_strchr(char *s, char c)
 {
