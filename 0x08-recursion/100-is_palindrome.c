@@ -23,7 +23,7 @@ int _strlen(char *s)
 {
 	if (*s)
 	{
-		return (1 + palin_strlen(s + 1));
+		return (1 + _strlen(s + 1));
 	}
 	return (0);
 }
@@ -35,7 +35,7 @@ int _strlen(char *s)
   */
 int is_palindrome(char *str)
 {
-	int length = palin_strlen(str) - 1, start = 0;
+	int length = _strlen(str) - 1, start = 0;
 
 	return (_palin_recursion(str, length, start));
 }
