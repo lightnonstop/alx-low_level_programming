@@ -2,7 +2,7 @@
 #include <stdlib.h>
 /**
   * main - Starting point function
-  * @argc: Size of array (argv)
+  * @argc: Size of the array
   * @argv: Array of command line arguments
   * Description: Adds up all given positive numbers
   *
