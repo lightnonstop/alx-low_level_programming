@@ -5,7 +5,7 @@
   * @argv: The array of command line argument
   * Return: 0 for success
   */
-int main(int argc, char **argv)
+int main(int argc, __attribute__ ((unused)) char **argv)
 {
 	printf("%d\n", argc - 1);
 	return (0);
