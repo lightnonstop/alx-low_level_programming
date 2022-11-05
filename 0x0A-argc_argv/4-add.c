@@ -10,8 +10,7 @@
   */
 int main(int argc, char **argv)
 {
-	int i, j, ret = 1;
-	long long int sum = 0;
+	int i, ret = 1, sum = 0;
 
 	if (argc < 3)
 	{
@@ -21,15 +20,15 @@ int main(int argc, char **argv)
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (atoll(argv[i]) > 0)
+			if (atoi(argv[i]) > 0)
 			{
-				sum += atoll(argv[i]);
+				sum += atoi(argv[i]);
 					if (i == argc - 1)
 					{
-						printf("%lld\n", sum);
+						printf("%d\n", sum);
 					}
 			}
-			else if (atoll(argv[i]) == 0)
+			else if (atoi(argv[i]) == 0)
 			{
 				printf("Error\n");
 				ret = 1;
