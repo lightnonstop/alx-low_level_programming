@@ -1,69 +1,51 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-#include <limits.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 /**
-  * change - Prints the minimum number of coins to make
-  * change for an amount of money.
-  * @coin: Array of coin denomination
-  * @m: Size of array of coin denomination
-  * @Cents: Amount of cents (money)
-  * Description: Calculates the minimum amount of
-  * coins to be returned as change for some cents
-  *
-  * Return:  Minimum number of coins to sum amount of cents
+ * main - print the min number of coins to make change for an amount of money
+ * @argc: argument count
+ * @argv: argument vector, array of strings
+ * Return: 1 if error, 0 otherwise
  */
-int change(int coin[], int m, int Cents)
-{
-	int res, i;
 
-	if (Cents == 0)
-		return (0);
-	res = INT_MAX;
-	for (i = 0; i < m; i++)
-	{
-		if (coin[i] <= Cents)
-		{
-			int sub_res = change(coin, m, Cents - coin[i]);
-
-			if (sub_res != INT_MAX && sub_res + 1 < res)
-				res = sub_res + 1;
-		}
-	}
-	return (res);
-
-}
-/**
-  * main - Starting point
-  * @argc: Number of arguments in array
-  * @argv: Array of command line arguments
-  * Description: Calls function that calculate the minimum amount of
-  * coins to be returned as change
-  * Return: 0 (Success);
-  */
 int main(int argc, char *argv[])
 {
-	int coin[] = {1, 2, 5, 10, 25};
-	int m = sizeof(coin) / sizeof(coin[0]), i, min, Cents;
+	int total, count;
+	unsigned int i;
+	char *p;
+	int cents[] = {25, 10, 5, 2};
 
-	if (!(argc == 2))
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	else if (argc == 2)
+
+	total = strtol(argv[1], &p, 10);
+	count = 0;
+
+	if (!*p)
 	{
-		for (i = 0; i < argc; i++)
+		while (total > 1)
 		{
-			if (atoi(argv[i]) < 0)
+			for (i = 0; i < sizeof(cents[i]); i++)
 			{
-				printf("0\n");
-				return (0);
+				if (total >= cents[i])
+				{
+					count += total / cents[i];
+					total = total % cents[i];
+				}
 			}
-			Cents = atoi(argv[1]);
-			min = change(coin, m, Cents);
 		}
+		if (total == 1)
+			count++;
 	}
-	printf("%d\n", min);
+	else
+	{
+		printf("Error\n");
+		return (1);
+	}
+
+	printf("%d\n", count);
 	return (0);
 }
