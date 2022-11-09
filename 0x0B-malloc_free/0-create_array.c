@@ -22,7 +22,7 @@ char *create_array(unsigned int size, char c)
 		A[i] = c;
 	}
 	if (A == NULL)
-		exit (size);
+		exit(size);
 	else
 		return (A);
 }
