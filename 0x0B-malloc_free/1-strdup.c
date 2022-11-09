@@ -7,7 +7,7 @@
   * @str: Pointer string 
   * Description: Which contains a copy of the given string
   *
-  * Return: Pointer to new string or NULL
+  * Return: Pointer to new string, NULL
   * if string or malloc return value is NULL
   */
 char *_strdup(char *str)
