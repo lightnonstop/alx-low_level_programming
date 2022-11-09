@@ -1,16 +1,31 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include "main.h"
-#include <string.h>
+#include <stdlib.h>
 /**
-  * _atoi - Converts an integer to a string.
-  * @s: First Operand
-  * Return: Integer (Success) or 0 (Failure)
+  * _atoi - Changes a string into an integer
+  * @s: Pointer to string
+  * Return: Integer from given string
   */
 int _atoi(char *s)
 {
-	int new;
+	int sign = 1, result = 0;
+	unsigned int sum = 0;
 
-	new = atoi(s);
-	return (new);
+	for (*s; *s != '\0'; s++)
+	{
+		if (*s == '-')
+			sign *= -1;
+		else if (*s >= 48 && *s <= 57)
+			break;
+	}
+	while (*s >= 48 && *s <= 57)
+	{
+		sum *= 10;
+		sum += *s - 48;
+		s++;
+	}
+	if (sign == -1)
+		result = -sum;
+	else
+		result = sum;
+	return (result);
 }
