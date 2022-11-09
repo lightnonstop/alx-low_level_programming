@@ -6,7 +6,7 @@
   * initializes it with a specific char.
   * @size: Number of memory to be allocated
   * @c: Character to be initialized
-  * Return: Pointer to array
+  * Return: Pointer to array, NULL if memory size or malloc is NULL
   */
 char *create_array(unsigned int size, char c)
 {
