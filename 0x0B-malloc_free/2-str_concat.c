@@ -11,11 +11,10 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	if (s1 == NULL || s2 == NULL)
-		return (NULL);
 	char *copy;
 	int len1, len2, i = 0, j = 0, total;
-
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
 	len1 = strlen(s1);
 	len2 = strlen(s2);
 	total = len1 + len2;
