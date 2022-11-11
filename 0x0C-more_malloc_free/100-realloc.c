@@ -28,18 +28,14 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		free(ptr);
 		return (NULL);
 	}
-	else
+	if ((new_size > old_size) && ptr)
 	{
-		if ((new_size > old_size) && ptr)
+		newptr = malloc(new_size);
+		if (newptr)
 		{
-			newptr = malloc(new_size);
-			if (newptr)
-			{
-				memcpy(newptr, ptr, old_size);
-				free(ptr);
-			}
-			return (newptr);
+			memcpy(newptr, ptr, old_size);
+			free(ptr);
 		}
 	}
-
+	return (newptr);
 }
