@@ -9,15 +9,16 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *arr;
-	unsigned int i;
+	unsigned int i, array_size;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	arr = malloc(nmemb * size);
+	array_size = nmemb * size;
+	arr = malloc(array_size);
 	if (arr == NULL)
 		return (NULL);
 	i = 0;
-	while (i < nmemb)
+	while (i < array_size)
 	{
 		arr[i] = 0;
 		i++;
