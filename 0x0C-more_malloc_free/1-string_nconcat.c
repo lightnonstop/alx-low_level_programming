@@ -23,14 +23,18 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	r = malloc(size + 1);
 	if (r == NULL)
 		return (NULL);
-	for (i = 0; i < length; i++)
+	for (i = 0; i < size; i++)
 	{
 		r[i] = s1[i];
 	}
-	for (j = 0; j < size; j++)
+	j = 0;
+	while (i < size && s2 != '\0')
 	{
-		r[j + length] = s2[j];
+		r[i] = s2[j];
+		i++;
+		j++;
 	}
-	r[j] = '\0';
+	r[i] = '\0';
 	return (r);
 }
+
