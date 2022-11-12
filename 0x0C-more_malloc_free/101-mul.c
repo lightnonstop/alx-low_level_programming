@@ -55,7 +55,7 @@ void mult(int sumargc1, int sumargc2, char *argv1, char *argv2)
   */
 int main(int argc, char **argv)
 {
-	int i, j, x, y, sumfsarg = 0, sumsecarg = 0;
+	int i, j, x, y, sumfsarg = 0, sumsecarg = 0, len1, len2;
 
 	if (argc != 3)
 	{
@@ -64,7 +64,8 @@ int main(int argc, char **argv)
 	}
 	for (i = 1; i < argc - 1 ; i++)
 	{
-		for (j = 0; j < strlen(argv[i]); j++)
+		len1 =  strlen(argv[i]);
+		for (j = 0; j < len1; j++)
 		{
 			if (!((argv[i][j]) >= 49 && (argv[i][j]) <= 57))
 			{
@@ -75,8 +76,9 @@ int main(int argc, char **argv)
 		}
 	}
 	for (x = 2; x < argc; x++)
-	{
-		for (y = 0; y < strlen(argv[x]); y++)
+	{	
+		len2 =  strlen(argv[x]);
+		for (y = 0; y < len2; y++)
 		{
 			if (!((argv[x][y]) >= 48 && (argv[x][y]) <= 57))
 			{
