@@ -32,13 +32,13 @@ void mult(int sumargc1, int sumargc2, char *argv1, char *argv2)
 		for (j = 0; j < l1; j++)
 			ans[i + j] += sec[i] * fs[j];
 	}
-	for (i = 0; i < l1 + l2; i++)
+	for (i = 0; i < sumargc1 + sumargc2; i++)
 	{
 		tmp = ans[i] / 10;
 		ans[i] = ans[i] % 10;
 		ans[i + 1] = ans[i + 1] + tmp;
 	}
-	for (i = l1 + l2; i >= 0; i--)
+	for (i = sumargc1 + sumargc2; i >= 0; i--)
 	{
 		if (ans[i] > 0)
 			break;
@@ -79,7 +79,7 @@ int main(int argc, char **argv)
 		len1 =  strlen(argv[i]);
 		for (j = 0; j < len1; j++)
 		{
-			if (!((argv[i][j]) >= 49 && (argv[i][j]) <= 57))
+			if (!((argv[i][j]) >= 48 && (argv[i][j]) <= 57) || (atoi(argv[i]) == 0))
 			{
 				print();
 				exit(98);
@@ -92,7 +92,7 @@ int main(int argc, char **argv)
 		len2 =  strlen(argv[x]);
 		for (y = 0; y < len2; y++)
 		{
-			if (!((argv[x][y]) >= 48 && (argv[x][y]) <= 57))
+			if (!((argv[x][y]) >= 48 && (argv[x][y]) <= 57) || (atoi(argv[x]) == 0))
 			{
 				print();
 				_putchar('\n');
