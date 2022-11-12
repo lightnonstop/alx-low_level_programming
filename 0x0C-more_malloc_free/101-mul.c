@@ -44,8 +44,20 @@ void mult(int sumargc1, int sumargc2, char *argv1, char *argv2)
 			break;
 	}
 	for (; i >= 0; i--)
-		printf("%d", ans[i]);
-	putchar('\n');
+		_putchar(ans[i] + '0');
+	_putchar('\n');
+}
+/**
+  * print - Prints error string
+  */
+void print(void)
+{
+	_putchar('E');
+	_putchar('r');
+	_putchar('r');
+	_putchar('o');
+	_putchar('r');
+	_putchar('\n');
 }
 /**
   * main - Start here
@@ -59,7 +71,7 @@ int main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		puts("Error");
+		print();
 		exit(98);
 	}
 	for (i = 1; i < argc - 1 ; i++)
@@ -69,20 +81,21 @@ int main(int argc, char **argv)
 		{
 			if (!((argv[i][j]) >= 49 && (argv[i][j]) <= 57))
 			{
-				puts("Error");
+				print();
 				exit(98);
 			}
 			sumfsarg++;
 		}
 	}
 	for (x = 2; x < argc; x++)
-	{	
+	{
 		len2 =  strlen(argv[x]);
 		for (y = 0; y < len2; y++)
 		{
 			if (!((argv[x][y]) >= 48 && (argv[x][y]) <= 57))
 			{
-				puts("Error");
+				print();
+				_putchar('\n');
 				exit(98);
 			}
 			sumsecarg++;
