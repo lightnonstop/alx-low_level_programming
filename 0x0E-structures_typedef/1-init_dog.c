@@ -5,7 +5,7 @@
   * @d: Pointer to variable of data type struct dog
   * @name: Name of the dog
   * @age: Age of the dog
-  * @owner: Owner of the dog
+  * @owner: Name of the owner of the dog
   */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
