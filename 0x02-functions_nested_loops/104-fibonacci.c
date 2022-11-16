@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#define LARGEST 10000000000
 /**
   * main - Starting point function
   * Description - program that prints the first 50
@@ -12,16 +13,16 @@
 int main(void)
 {
 	int n;
-	unsigned long int fs = 1, ss = 2, sum;
+	unsigned long long int fs = 0, ss = 1, sum;
 
-	for (n = 0; n < 98; n++)
+	for (n = 1; n <= 98; n++)
 	{
-		printf("%lu", fs);
 		sum = fs + ss;
 
 		fs = ss;
 
 		ss = sum;
+		printf("%llu", ss);
 		if (!(n == 97))
 		{
 			putchar (',');

@@ -11,64 +11,27 @@
   * Return: Pointer to 2D array, NULL if malloc is NULL, NULL if row or
   * column of array is negative or zero.
   */
-void free_grid(int **grid, int height)
+char *argstostr(int ac, char **av)
 {
-	int i;
-	for (i = height; i >= 0; i--)
+	int i = 0;
+
+	av = malloc(ac * sizeof(char *));
+	while (i < ac)
 	{
-		free(grid[i]);
+		
 	}
-}
-
-int **alloc_grid(int width, int height)
-{
-	int **arr;
-	int i;
-
-	if (width <= 0 || height <= 0)
-		return (NULL);
-	arr = malloc(height * sizeof(int *));
-	if (arr == NULL)
-		return (NULL);
-	for (i = 0; i < height; i++)
-	{
-		arr[i]  = (int *)malloc(width * sizeof(int));
-	}
-		return (arr);
-}
-void print_grid(int **grid, int width, int height)
-{
-	int w;
-	int h;
-
-	h = 0;
-	while (h < height)
-	{
-		w = 0;
-		while (w < width)
-		{
-			printf("%d ", grid[h][w]);
-			w++;
-		}
-		printf("\n");
-		h++;
-	}   
-}
-
-int main(void)
-{
-	int **grid;
 	
-	grid = alloc_grid(6, 4);
-	if (grid == NULL)
+}
+int main(int ac, char *av[])
+{
+	char *s;
+
+	s = argstostr(ac, av);
+	if (s == NULL)
 	{
 		return (1);
 	}
-	print_grid(grid, 6, 4);
-	printf("\n");
-	grid[0][3] = 98;
-	grid[3][4] = 402;	
-	print_grid(grid, 6, 4);
-	free_grid(grid, 4);
+	printf("%s", s);
+	free(s);
 	return (0);
 }
