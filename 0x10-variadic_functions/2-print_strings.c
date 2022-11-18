@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "variadic_functions.h"
 /**
-  * print_strings - Prints strings
+  * print_strings - Prints given strings
   * @separator: Separator to be used after string
   * @n: Number of variable string arguments passed
   */
