@@ -14,8 +14,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	va_start(arg, n);
 
-	if (separator == NULL)
-		separator = " ";
+	if (!separator)
+		separator = "";
 	if (n == 0)
 		exit(0);
 	for (i = 0; i < n; i++)
