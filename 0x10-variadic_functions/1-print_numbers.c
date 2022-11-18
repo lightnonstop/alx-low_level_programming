@@ -14,8 +14,12 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	va_start(arg, n);
 
-	if (!separator || n == 0)
+	if (!separator)
 		separator = "";
+	if (n == 0)
+	{
+		separator = " ";
+	}
 	for (i = 0; i < n; i++)
 	{
 		if (i < n - 1)
