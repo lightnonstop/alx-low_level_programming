@@ -10,12 +10,6 @@ void print_all(const char * const format, ...)
 	int i = 0, len = 0;
 
 	va_list ap;
-
-	if (!format)
-	{
-		printf("Invalid\n");
-		exit(0);
-	}
 	while (format[len] != '\0')
 	{
 		len++;
@@ -35,7 +29,7 @@ void print_all(const char * const format, ...)
 				printf("%d ", va_arg(ap, int));
 				break;
 			case 's':
-				printf("%s ", va_arg(ap, char*));
+				printf("%s ",va_arg(ap, char*));
 				break;
 		}
 		i++;
