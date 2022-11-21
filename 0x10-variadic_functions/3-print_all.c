@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include "variadic_functions.h"
 /**
  * print_all - Prints anything
