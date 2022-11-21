@@ -5,4 +5,5 @@
 #include <stdarg.h>
 #include <stlib.h>
 
+int _printf(const char *format, ...);
 #endif
