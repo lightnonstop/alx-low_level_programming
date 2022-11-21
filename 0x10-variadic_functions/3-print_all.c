@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #include "variadic_functions.h"
 /**
  * print_all - Prints anything
@@ -29,10 +28,12 @@ void print_all(const char * const format, ...)
 					break;
 				case 's':
 					str = va_arg(ap, char*);
-					if (!str)
-						str = "(nil)";
-						printf("%s%s", sep, str);
-						break;
+				if (!str)
+				{
+					str = "(nil)";
+				}
+					printf("%s%s", sep, str);
+					break;
 				default:
 					i++;
 					continue;
