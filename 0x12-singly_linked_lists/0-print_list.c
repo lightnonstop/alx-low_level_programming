@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "lists.h"
+#include <string.h>
 /**
   * print_list -  Prints all the elements of a list
   * @h: Pointer to node
@@ -8,7 +9,7 @@
   */
 size_t print_list(const list_t *h)
 {
-	unsigned int count_node = 0, l;
+	unsigned int count_node = 0, l = 0;
 	list_t *new;
 	char *s;
 
@@ -18,7 +19,7 @@ size_t print_list(const list_t *h)
 		if (h->str)
 		{
 			s = h->str;
-			l = h->len;
+			l = strlen(s);
 		}
 		else
 		{
@@ -30,7 +31,7 @@ size_t print_list(const list_t *h)
 		while (new != NULL)
 		{
 			s = new->str;
-			l = new->len;
+			l = strlen(s);
 			printf("[%d] %s\n", l, s);
 			new = new->next;
 			count_node++;
