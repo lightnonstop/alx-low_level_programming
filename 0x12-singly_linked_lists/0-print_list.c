@@ -11,6 +11,7 @@ size_t print_list(const list_t *h)
 	unsigned int count_node = 0, l;
 	list_t *new;
 	char *s;
+
 	if (h)
 	{
 		count_node++;
@@ -22,7 +23,7 @@ size_t print_list(const list_t *h)
 		else
 		{
 			s = "(nil)";
-			l = 0; 
+			l = 0;
 		}
 		printf("[%d] %s\n", l, s);
 		new = h->next;
@@ -32,7 +33,7 @@ size_t print_list(const list_t *h)
 			l = new->len;
 			printf("[%d] %s\n", l, s);
 			new = new->next;
-			count_node++;	
+			count_node++;
 		}
 	}
 	return (count_node);
