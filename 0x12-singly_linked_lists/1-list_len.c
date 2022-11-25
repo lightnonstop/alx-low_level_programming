@@ -10,17 +10,20 @@ size_t list_len(const list_t *h)
 	unsigned int count_element = 0;
 	list_t *new;
 
-	if (h->str)
+	if (h)
 	{
-		count_element++;
-	}
-	new = h->next;
-	while (new != NULL)
-	{
-		if (new->str)
+		if (h->str)
 		{
 			count_element++;
-			new = new->next;
+		}
+		new = h->next;
+		while (new != NULL)
+		{
+			if (new->str)
+			{
+				count_element++;
+				new = new->next;
+			}
 		}
 	}
 	return (count_element);
