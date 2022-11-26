@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdlib.h>
 /**
  * free_list - Frees list completely
  * @head: Pointer to node
