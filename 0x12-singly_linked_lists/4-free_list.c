@@ -1,18 +1,17 @@
 #include "lists.h"
 #include <stdlib.h>
 /**
- * free_list - Frees list completely
+ * free_list - Frees a list completely
  * @head: Pointer to node
  */
 void free_list(list_t *head)
 {
-	list_t *acc = NULL;
-
+	list_t *temp = NULL;
 	while (head)
 	{
-		acc = head;
+		temp = head;
 		head = head->next;
-		free(acc->str);
-		free(acc);
+		free(temp->str);
+		free(temp);
 	}
 }
