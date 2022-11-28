@@ -7,10 +7,9 @@
 size_t print_listint(const listint_t *h)
 {
 	unsigned int count_node;
-
-	count_node = 0;
 	listint_t *new;
 
+	count_node = 0;
 	if (h)
 	{
 		count_node++;
@@ -18,7 +17,7 @@ size_t print_listint(const listint_t *h)
 		new = h->next;
 		while (new != NULL)
 		{
-			if (new->n)
+			if (new)
 			{
 				count_node++;
 				printf("%d\n", new->n);
