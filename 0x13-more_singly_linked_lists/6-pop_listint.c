@@ -8,6 +8,7 @@ int pop_listint(listint_t **head)
 {
 	listint_t *new;
 	int num;
+
 	if (head)
 	{
 		if (*head)
