@@ -9,7 +9,7 @@ int count_bit(int num)
 	int count;
 
 	count = 0;
-	while (num > 0)
+	while (num != 0)
 	{
 		num /= 2;
 		count++;
