@@ -28,8 +28,8 @@ int count_bit(int num)
 int get_bit(unsigned long int n, unsigned int index)
 {
 	int *new;
-	unsigned int bits, i;
-	if (n < 0)
+	unsigned int bits, i, zero = 0;
+	if (n < zero)
 		return (-1);
 	bits = count_bit(n);
 	new = malloc(sizeof(int) * bits);
