@@ -29,16 +29,20 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	int *new;
 	unsigned int bits, i;
+	int ret = 0;
 
 	bits = count_bit(n);
 	new = malloc(sizeof(int) * bits);
 	bits--;
 	i = 0;
-	while (n > 0 && i <= bits)
+	while (n != 0 && i <= bits)
 	{
 		new[i] = n & 1;
 		if (i == index)
-			return (new[i]);
+		{
+			ret = new[i];
+			return (ret);
+		}
 		n = n >> 1;
 		i++;
 	}
