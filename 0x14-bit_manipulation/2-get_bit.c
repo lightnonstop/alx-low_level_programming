@@ -32,7 +32,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	bits = count_bit(n);
 	new = malloc(sizeof(int) * bits);
 	bits--;
-	if (index <= (sizeof(n) * 8))
+	if (!(index >= (sizeof(n) * 8)))
 	{
 		while (n != 0 && i <= bits)
 		{
