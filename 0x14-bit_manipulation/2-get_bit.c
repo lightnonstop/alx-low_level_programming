@@ -9,7 +9,7 @@ int count_bit(int num)
 	int count;
 
 	count = 0;
-	while (num != 0)
+	while (num > 0)
 	{
 		num /= 2;
 		count++;
@@ -29,6 +29,7 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	int *new;
 	unsigned int bits, i;
+	int ret;
 
 	bits = count_bit(n);
 	new = malloc(sizeof(int) * bits);
@@ -42,5 +43,6 @@ int get_bit(unsigned long int n, unsigned int index)
 		n = n >> 1;
 		i++;
 	}
-	return (-1);
+	ret = -1;
+	return (ret);
 }
