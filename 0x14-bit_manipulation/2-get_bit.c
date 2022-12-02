@@ -39,10 +39,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	{
 		new[i] = n & 1;
 		if (i == index)
-		{
-			ret = new[i];
-			return (ret);
-		}
+			return(new[i]);
 		n = n >> 1;
 		i++;
 	}
