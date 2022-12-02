@@ -40,6 +40,8 @@ int get_bit(unsigned long int n, unsigned int index)
 		new[i] = n & 1;
 		if (i == index)
 			return (new[i]);
+		else if (i == bits && i != index)
+				return (0);
 		n = n >> 1;
 		i++;
 	}
