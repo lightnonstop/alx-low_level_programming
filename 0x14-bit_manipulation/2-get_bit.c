@@ -4,9 +4,9 @@
   * @num: The number
   * Return: Number of bits counted
   */
-int count_bit(int num)
+unsigned int count_bit(unsigned int num)
 {
-	int count;
+	unsigned int count;
 
 	count = 0;
 	while (num != 0)
@@ -28,12 +28,11 @@ int count_bit(int num)
 int get_bit(unsigned long int n, unsigned int index)
 {
 	int *new;
-	unsigned int bits, i;
+	unsigned int bits, i = 0;
 
 	bits = count_bit(n);
 	new = malloc(sizeof(int) * bits);
 	bits--;
-	i = 0;
 	while (n != 0 && i <= bits)
 	{
 		new[i] = n & 1;
