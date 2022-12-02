@@ -32,6 +32,8 @@ int get_bit(unsigned long int n, unsigned int index)
 
 	bits = count_bit(n);
 	new = malloc(sizeof(int) * bits);
+	if (new == NULL)
+		return (0);
 	bits--;
 	while (n != 0 && i <= bits)
 	{
