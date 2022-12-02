@@ -34,7 +34,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	new = malloc(sizeof(int) * bits);
 	bits--;
 	i = 0;
-	while (n != 0 && i <= bits)
+	while (n > 0 && i <= bits)
 	{
 		new[i] = n & 1;
 		if (i == index)
