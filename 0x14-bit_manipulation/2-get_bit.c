@@ -29,6 +29,7 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	int *new;
 	unsigned int bits, i = 0;
+
 	bits = count_bit(n);
 	new = malloc(sizeof(int) * bits);
 	bits--;
@@ -45,6 +46,5 @@ int get_bit(unsigned long int n, unsigned int index)
 			i++;
 		}
 	}
-	else
-		return (-1);
+	return (-1);
 }
