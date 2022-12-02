@@ -27,11 +27,11 @@ int count_bit(int num)
   */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned long int *new;
+	int *new;
 	unsigned int bits, i;
 
 	bits = count_bit(n);
-	new = malloc(sizeof(unsigned long int) * bits);
+	new = malloc(sizeof(int) * bits);
 	bits--;
 	i = 0;
 	while (n != 0 && i <= bits)
