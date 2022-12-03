@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-  * flip_bits - Determines the number of bits needed to flip
+  * flip_bits - Determines the number of bits needed to be flipped
   * to get from one number to another.
   *
   * @n: First Operand
@@ -23,9 +23,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	count = 0;
 	while (new != 0)
 	{
-		a = new & 1;
-		if (a == 1)
-			count++;
+		count = count + (new & 1);
 		new = new >> 1;
 	}
 	return (count);
