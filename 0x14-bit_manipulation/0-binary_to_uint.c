@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-  * binary_to_uint - Converts a binary number to a positive integer
+  * binary_to_uint - Converts a binary number to a decimal number
   *
   * @b: Pointer to string of binary number characters
   *
