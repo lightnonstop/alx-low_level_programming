@@ -11,7 +11,7 @@
   */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd, rd, wr;
+	ssize_t fd, rd, wr;
 	char *buff;
 
 	if (filename == NULL)
@@ -29,7 +29,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	rd = read(fd, buff, letters);
 	if (rd == -1)
+	{
+		free(buff);
 		return (0);
+	}
 
 	buff[letters] = '\0';
 
