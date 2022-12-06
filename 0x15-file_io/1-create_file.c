@@ -10,29 +10,23 @@
   */
 int create_file(const char *filename, char *text_content)
 {
-	int fd, count, i, wr;
+	int fd, i;
 
 	if (filename == NULL)
 		return (-1);
-	count = 0;
+	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
 	i = 0;
 	while (text_content[i] && text_content[i] != '\0')
-	{
-		count++;
 		i++;
-	}
-	/*fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);*/
-	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 	if (fd == -1)
-		return (-1);
-	wr = write(fd, text_content, count);
-	if (wr == -1)
 		return (-1);
 	if (text_content == NULL)
 	{
 		close(fd);
 		return (-1);
 	}
+	else
+		write(fd, text_content, i);
 	close(fd);
 	return (1);
 }
