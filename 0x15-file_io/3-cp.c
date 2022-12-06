@@ -6,8 +6,9 @@
   * create_and_copy - Copies the content of a file to another file
   * @oldfile: File to be copied from
   * @newfile: File to be copied to
+  * Return: 1 if successful, 98 or 99 or 100 if there's a failure somewhere
   */
-void create_and_copy(char *oldfile, char *newfile)
+int create_and_copy(char *oldfile, char *newfile)
 {
 	int of, nf, rd, wr, clo, cln;
 	char buff[BUFF_SIZE];
@@ -16,7 +17,7 @@ void create_and_copy(char *oldfile, char *newfile)
 	if (oldfile == NULL)
 	{
 		dprintf(of, "Error: Can't read from file %s\n", oldfile);
-		exit(98);
+		return (98);
 	}
 	nf = open(newfile, O_RDWR | O_CREAT | O_TRUNC, 0664);
 	rd = read(of, buff, BUFF_SIZE);
@@ -24,20 +25,21 @@ void create_and_copy(char *oldfile, char *newfile)
 	if (clo == -1)
 	{
 		printf("Error: Can't close fd %d\n", of);
-		exit(100);
+		return (100);
 	}
 	wr = write(nf, buff, rd);
 	if (wr == -1)
 	{
 		printf("Error: Can't write to file %s\n", oldfile);
-		exit(99);
+		return (99);
 	}
 	cln = close(nf);
 	if (cln == -1)
 	{
 		printf("Error: Can't close fd %d\n", nf);
-		exit(100);
+		return (100);
 	}
+	return (1);
 }
 /**
   * main - Starting point
