@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "main.h"
-#define BUFF_SIZE 1024
+#define BUFF_SIZE 2048
 /**
   * create_and_copy - Copies the content of a file to another file
   * @oldfile: File to be copied from
