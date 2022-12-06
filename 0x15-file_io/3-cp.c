@@ -15,7 +15,7 @@ int create_and_copy(char *oldfile, char *newfile)
 
 	if (oldfile == NULL)
 	{
-		dprintf(of, "Error: Can't read from file %s\n", oldfile);
+		dprintf(2, "Error: Can't read from file %s\n", oldfile);
 		exit(98);
 	}
 	of = open(oldfile, O_RDONLY);
