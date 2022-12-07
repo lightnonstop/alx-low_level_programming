@@ -21,7 +21,7 @@ void exit_mess(char *str, char *file, int exit_code)
 void _copy(char *file_from, char *file_to)
 {
 	int fd1, fd2, rd, wr;
-	char buff[BUFF_SIZE];
+	char buff[1024];
 
 	fd1 = open(file_from, O_RDONLY);
 	if (fd1 == -1)
