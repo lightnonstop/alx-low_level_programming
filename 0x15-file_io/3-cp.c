@@ -32,7 +32,7 @@ void _copy(char *file_from, char *file_to)
 		exit_mess("Error: Can't write to %s\n", file_to, 99);
 
 	rd = 1024;
-	while (rd == 1024)
+	while (rd >= 1024)
 	{
 		rd = read(fd1, buff, 1024);
 		if (rd == -1)
@@ -43,7 +43,7 @@ void _copy(char *file_from, char *file_to)
 		if (wr == -1)
 			exit_mess("Error: Can't write to %s\n", file_to, 99);
 	}
-	if (rd == -1 || rd > 1024)
+	if (rd == -1)
 		exit_mess("Error: Can't read from file %s\n", file_from, 98);
 
 	if (close(fd2) == -1)
