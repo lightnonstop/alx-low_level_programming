@@ -32,14 +32,20 @@ void _copy(char *file_from, char *file_to)
 	if (fd2 == -1)
 		exit_mess("Error: Can't write to %s\n", file_to, 99);
 
+	rd = BUFF_SIZE;
+	while (rd == BUFF_SIZE)
+	{
+		rd = read(fd1, buff, BUFF_SIZE);
+		if (rd == -1)
+			exit_mess("Error: Can't read from file %s\n", file_from, 98);
 
-	rd = read(fd1, buff, BUFF_SIZE);
+		wr = write(fd2, buff, rd);
+
+		if (wr == -1)
+			exit_mess("Error: Can't write to %s\n", file_to, 99);
+	}
 	if (rd == -1)
 		exit_mess("Error: Can't read from file %s\n", file_from, 98);
-
-	wr = write(fd2, buff, rd);
-	if (wr == -1)
-		exit_mess("Error: Can't write to %s\n", file_to, 99);
 
 	if (close(fd2) == -1)
 	{
