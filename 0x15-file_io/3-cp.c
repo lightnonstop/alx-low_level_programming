@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "main.h"
-#define BUFF_SIZE 1024
 /**
   * exit_mess - Handles exit code and exit messages
   * @str: Exit message
@@ -32,10 +31,10 @@ void _copy(char *file_from, char *file_to)
 	if (fd2 == -1)
 		exit_mess("Error: Can't write to %s\n", file_to, 99);
 
-	rd = BUFF_SIZE;
-	while (rd == BUFF_SIZE)
+	rd = 1024;
+	while (rd == 1024)
 	{
-		rd = read(fd1, buff, BUFF_SIZE);
+		rd = read(fd1, buff, 1024);
 		if (rd == -1)
 			exit_mess("Error: Can't read from file %s\n", file_from, 98);
 
