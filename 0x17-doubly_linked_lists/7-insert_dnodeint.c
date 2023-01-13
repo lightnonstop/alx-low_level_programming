@@ -20,24 +20,26 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	new->n = n;
 	if (idx == 0)
 	{
-		new->next = *h;
-		new->prev = NULL;
-		(*h)->prev = new;
+		if (*h)
+		{
+			new->next = *h;
+			(*h)->prev = new;
+		}
 		*h = new;
 		return (*h);
 	}
-	while (temp)
+	while (nth < idx - 1 && temp)
 	{
-		if (nth == idx - 1)
-		{
-			new->next = temp->next;
-			new->prev = temp;
-			temp->next = new;
-		}
 		temp = temp->next;
 		nth++;
 	}
-	if (idx > nth)
-		return (NULL);
+	if (temp)
+	{
+		if (temp->next)
+			temp->next->prev = new;
+		new->next = temp->next;
+		new->prev = temp;
+		temp->next = new;
+	}
 	return (new);
 }
