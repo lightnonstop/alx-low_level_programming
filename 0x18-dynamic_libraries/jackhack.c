@@ -1,9 +1,13 @@
 #include <unistd.h>
 #include <string.h>
-int rand()
+/**
+  * rand - Generate my own numbers
+  * Return: Different numbers for jackpot winning
+  */
+int rand(void)
 {
 	static int ct = -1;
-	
+
 	ct++;
 	if (ct == 0)
 		return (8);
@@ -17,5 +21,5 @@ int rand()
 		return (23);
 	if (ct == 5)
 		return (74);
-	return ct * ct % 30000;
+	return (ct * ct % 30000);
 }
